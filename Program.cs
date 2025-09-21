@@ -29,11 +29,11 @@ namespace algorithms
             int perRunSeconds = 1; // время замера для одного n в рамках одного прохода
             bool loopNs = true;
             TimeSpan totalDuration = TimeSpan.FromMinutes(10); // длительность одного trial (~10 минут)
-            string outCsv = "results_sum_function_various_n1.csv";
+            string outCsv = "results_sum_function_various_n1.csv"; // имя файла
 
             // чтобы данные отличались между запусками/trial
             var rnd = new Random();
-            IFunction func = new SumFunction();
+            IFunction func = new SumFunction(); // тут менять функцию
 
             var ns = GenerateLogSpaceNs(maxN, points);
 
